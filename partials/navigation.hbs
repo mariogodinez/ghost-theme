@@ -1,12 +1,10 @@
 <nav class="nav">
-        
-
-    {{#if @blog.logo}}
-                <img src="{{@blog.logo}}"  alt="{{@blog.title}}" class="logo-chico logo-chico-nav"/>
-            {{/if}}
+    <img src="sad.png"  alt="" class="logo-chico logo-chico-nav"/>
     <ul class="nav-items">
         {{#foreach navigation}}
-            <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+            <li class="nav-item nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation">
+            	<a href="{{url absolute="true"}}">{{label}}</a>
+            </li>
         {{/foreach}}
     </ul>
     <span class="fa fa-bars nav-button"><span>

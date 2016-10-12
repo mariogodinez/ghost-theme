@@ -9,27 +9,20 @@
 <header class="main-header post-head {{#if image}}" style="border-bottom:4px solid #02344a; background-size:cover;height:510px; background-image: url({{image}}){{else}}no-cover{{/if}}">
 
 <header class="post-header" style="text-align:center; color:white; padding-top:1em;  font-size:1.4em; ">
-      
-        <div class="beta">
-            
-                Version beta
-        
-        </div>
-
-
-
-            <h1 class="post-title" style="color:white; text-transform:capitalize; font-size:1.6em; text-shadow:3px 3px 0px #000;">{{title}}</h1>
-            <section class="post-meta" style="border:0;">
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}" style="text-shadow:2px 2px 0px #000;">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-            </section>
-        </header>
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}">
+    <h1 class="post-title" style="color:white; text-transform:capitalize; font-size:1.6em; text-shadow:3px 3px 0px #000;">{{title}}</h1>
+    <section class="post-meta" style="border:0;">
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}" style="text-shadow:2px 2px 0px #000;">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+    </section>
+</header>
+<nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+    {{#if @blog.logo}}
+        <a class="blog-logo" href="{{@blog.url}}">
             <figure class="logo hvr-buzz-out" style="position:relative; top:170px; font-size:1.2em !important; ">
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}" style="border-color:#02344a;" />
             </figure>
-            </a>{{/if}}
-    </nav>
+        </a>
+    {{/if}}
+</nav>
 </header>
 
 <main class="content-view" role="main">
@@ -91,45 +84,31 @@
 </main>
 
 <aside class="next-prev">
-
-    
- <div style="width:400px; margin-right:60px;">
-
+    <div style="width:400px; margin-right:60px;">
         {{#next_post}}
-       
             <a href="{{url}}" style="position:relative; top:-5px; left:40%;"> 
                 < Anterior
             </a>
-        <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-
-           
-            <section class="next-prev-info">
-                <h2 style="color:white">{{title}}</h2>
-                <p>{{excerpt words="25"}}&hellip;</p>
-            </section>
-        </div>
-
-        </div>
+            <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+                <section class="next-prev-info">
+                    <h2 style="color:white">{{title}}</h2>
+                    <p>{{excerpt words="25"}}&hellip;</p>
+                </section>
+            </div>
         {{/next_post}}
-    
-
+     </div>
 
     <div style="width:400px;">
-
-
         {{#prev_post}}
-        
             <a href="{{url}}" style="position:relative; top:-5px; left:40%;"> 
                 Siguiente >
             </a>
-        <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-
-           
-            <section class="next-prev-info">
-                <h2 style="color:white">{{title}}</h2>
-                <p>{{excerpt words="19"}}&hellip;</p>
-            </section>
-        </div>
+            <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+                <section class="next-prev-info">
+                    <h2 style="color:white">{{title}}</h2>
+                    <p>{{excerpt words="19"}}&hellip;</p>
+                </section>
+            </div>
         {{/prev_post}}
     </div>
 </aside>
