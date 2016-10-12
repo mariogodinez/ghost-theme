@@ -1,0 +1,59 @@
+
+{{! This is the post loop - each post will be output using this markup }}
+
+
+<section class="posts">
+<div class="welcome">
+    <h2 style="color:gray; text-decoration:underline;
+    background:white;border-radius:5px;box-shadow:3px 3px 0 #red, 3px 3px 0 #fff; width:70%; margin:10px auto; margin-top:5px; padding:3px 0 5px 0;
+    ">Bienvenido a Mi Blog</h2>
+    <p style="font-size:22px;">
+       Si has llegado hasta aqui te felicito. Apuesto que eres de las personas inquietas por estar aprendiendo día a día y actualizando sus conocimientos pero sobre todo, haciendo comunidad para aprender mas y mejor. Aqui aprenderás sobre emprendimiento y las mejores tecnologias .
+    </p>
+
+
+
+    {{! Aqui Seran las TAGS 
+    <div clas="tags">
+        <h4>Que Aprenderás hoy?</h4>
+        <a href="/css3" class="tags-item">HTML5</a>
+        <a class="tags-item">Css3</a>
+        <a class="tags-item">JavaScript</a>
+        <a class="tags-item">life!</a>
+
+    </div>}}
+</div>
+{{#foreach posts}}
+    
+    <article class="{{post_class}} post">
+        {{#if image}}
+        <figure class="post-image">
+            <a href="{{url}}"><img src="{{image}}" alt="{{title}}" class="index-post-image" style="width:100%; box-shadow:0; margin:0;"></a>
+        </figure>
+    {{/if}}
+        <div class="post-info">
+            <header class="post-header">
+                <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                <footer class="post-meta">
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </footer>
+            </header>
+            <section class="post-excerpt">
+                <p>{{excerpt words="30"}} . . . 
+
+                <a class="read-more" href="{{url}}">Leer Más</a></p>
+            </section>
+            
+        </div>
+        
+    </article>
+
+{{/foreach}}
+    
+    {{> "mail"}}
+    {{pagination}}
+    
+</section> 
+
+
+{{> "footer"}}

@@ -1,0 +1,52 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="main-header {{#if @blog.cover}}" style="background-size:cover; background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <div class="opaco">
+
+        <nav class="main-nav overlay clearfix">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}">
+            <figure class="logo hvr-buzz-out">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+            </figure>
+            </a>{{/if}}
+
+
+        </nav>
+        <div class="vertical">
+            <div class="main-header-content inner">
+                <h1 class="page-title">{{@blog.title}}</h1>
+                <h2 class="page-description">{{@blog.description}}  <span class="red">HTML5</span>, <span class="blue">CSS3</span> y <span class="yellow">JavaScript</span>.</h2>
+            </div>
+        </div>
+
+        <a class="scroll-down material-icons red" href="#content" data-offset="-45">
+            keyboard_arrow_down
+        </a>
+
+        <figure class="cog-animated cog-animated-1 animar-cog">
+            <img src="./assets/images/roar.png" alt="" style="box-shadow:none; margin:0;">
+        </figure>
+        
+        <figure class="cog-animated cog-animated-2 animar-cog ">
+            <img src="./assets/images/roar2.png" alt="" style="box-shadow:none; margin:0;">
+        </figure>
+        
+        <figure class="cog-animated cog-animated-3 animar-cog">
+            <img src="./assets/images/roar3.png" alt="" style="box-shadow:none; margin: 0;">
+        </figure>
+
+    </div>  
+</header>
+
+
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+
+</main>

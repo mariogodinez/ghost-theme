@@ -1,0 +1,53 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="border:4px solid #02344a; background-size:cover;height:510px; background-image: url({{image}}){{else}}no-cover{{/if}}">
+        
+        <header class="post-header" style="text-align:center; color:white; padding-top:1em;  font-size:1.4em;">
+
+            <h1 class="post-title" style="color:white; text-transform:capitalize; font-size:1.6em; text-shadow:3px 3px 0px #000;">{{title}}</h1>
+
+        </header>
+
+
+
+        <div class="beta">
+            
+                Version beta!
+        
+        </div>
+        
+
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}">
+            <figure class="logo hvr-buzz-out" style="position:relative; top:200px; font-size:1.2em !important;">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}" style="border-color:#02344a;" />
+            </figure>
+            </a>{{/if}}
+    
+    </nav>
+</header>
+
+
+    <main class="content-view" role="main">
+        <article class="content-post-view-all">
+
+           
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+        </article>
+    </main>
+
+
+
+    {{> "footer"}}
+
+{{/post}}
