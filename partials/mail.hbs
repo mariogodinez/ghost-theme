@@ -1,66 +1,17 @@
 <section class="mail">
-
-
-	<!-- Begin MailChimp Signup Form -->
-	<style type="text/css">
-		#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-		/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-		   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-	</style>
-	<div id="mc_embed_signup">
-	<form action="//facebook.us14.list-manage.com/subscribe/post?u=dd48bc2444e2e0a756501f73b&amp;id=a6d1a3b7fa" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-
-	
-		<h2 class="text-center">Unete a esta lista de newsletter</h2>
-		<p class="text-center">WE are awesome people who is always looking for a good</p>
-
-	<div id="mc_embed_signup_scroll">
-		
-	<div class="mc-field-group">
-		<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-	</div>
-	<div class="mc-field-group">
-		<input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Nombre">
-	</div>
-		<div id="mce-responses" class="clear">
-			<div class="response" id="mce-error-response" style="display:none"></div>
-			<div class="response" id="mce-success-response" style="display:none"></div>
-		</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-	    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dd48bc2444e2e0a756501f73b_a6d1a3b7fa" tabindex="-1" value=""></div>
-
-	    
-	  </div>
-
-	  <div class="clear">
-	    	<input type="submit" value="Unirme" name="subscribe" id="mc-embedded-subscribe" class="button">
-	    </div>
-	</form>
-	</div>
-	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-	<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text'; /*
-	 * Translated default messages for the $ validation plugin.
-	 * Locale: ES
-	 */
-	$.extend($.validator.messages, {
-	  required: "Este campo es obligatorio.",
-	  remote: "Por favor, rellena este campo.",
-	  email: "Por favor, escribe una dirección de correo válida",
-	  url: "Por favor, escribe una URL válida.",
-	  date: "Por favor, escribe una fecha válida.",
-	  dateISO: "Por favor, escribe una fecha (ISO) válida.",
-	  number: "Por favor, escribe un número entero válido.",
-	  digits: "Por favor, escribe sólo dígitos.",
-	  creditcard: "Por favor, escribe un número de tarjeta válido.",
-	  equalTo: "Por favor, escribe el mismo valor de nuevo.",
-	  accept: "Por favor, escribe un valor con una extensión aceptada.",
-	  maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
-	  minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
-	  rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
-	  range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
-	  max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
-	  min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
-	});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-	<!--End mc_embed_signup-->
-
+		<section class="landingForm">
+			<img src="{{@blog.logo}}" alt="{{@blog.logo}}" width="100" height="100">
+			<h3 class="margin-top0" style="color:#0099ff;">Recibe los descuentos y ofertas a tu inbox</h3>
+			<p>Únete a los mas de 250 subscriptores</p>
+			<form action="//facebook.us14.list-manage.com/subscribe/post?u=dd48bc2444e2e0a756501f73b&amp;id=a6d1a3b7fa" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+				<input type="text" placeholder="Nombre Completo" name="FNAME">
+				<input type="email" placeholder="Tu email" name="EMAIL">
+				<input type="submit" placeholder="Subscribirme" value="¡Quiero Unirme!" class="backRed colorWhite" name="subscribe">
+			</form>
+			<p class="copy">
+				<span class="fa fa-lock"></span>
+				Confidencialidad. Nunca SPAM. Puedes darte de baja cuando quieras.
+			</p>
+		</section>
 </section>
 

@@ -5,10 +5,14 @@
 /* globals jQuery, document */
 (function ($, undefined) {
     "use strict";
-
+    // To hide the welcome message when other pages of pagination
+        var welcome = document.getElementById('welcome');
+        if(window.location.href !== "http://localhost:2368/"){
+            welcome.classList.add('hide');
+        }
+    // End comment
 
     
-
     var $document = $(document);
 
     $document.ready(function () {

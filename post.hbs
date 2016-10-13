@@ -25,10 +25,11 @@
 </nav>
 </header>
 
+
 <main class="content-view" role="main">
     <article class="content-post-view-all">
 
-        <section class="post-content-view">
+        <section class="post-content-view content">
             {{content}}
         </section>
 
@@ -61,7 +62,6 @@
 
             <section class="share" style="color:white;">
                     <h4 style="color:white;">Te gustó este post?, Ayudame a compartirlo para que otr@s puedan leerlo!</h4>
-
                 <div class="share-redes">
                     <a class="icon-twitter" style="color:#40A8E2;" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
@@ -89,12 +89,6 @@
             <a href="{{url}}" style="position:relative; top:-5px; left:40%;"> 
                 < Anterior
             </a>
-            <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-                <section class="next-prev-info">
-                    <h2 style="color:white">{{title}}</h2>
-                    <p>{{excerpt words="25"}}&hellip;</p>
-                </section>
-            </div>
         {{/next_post}}
      </div>
 
@@ -103,16 +97,11 @@
             <a href="{{url}}" style="position:relative; top:-5px; left:40%;"> 
                 Siguiente >
             </a>
-            <div class="read-next{{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-                <section class="next-prev-info">
-                    <h2 style="color:white">{{title}}</h2>
-                    <p>{{excerpt words="19"}}&hellip;</p>
-                </section>
-            </div>
+
         {{/prev_post}}
     </div>
 </aside>
-   
+
     {{"> mail"}}
     {{> "footer"}}
 {{/post}}

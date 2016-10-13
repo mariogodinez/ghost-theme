@@ -14,30 +14,20 @@
 
         </header>
 
-
-
-        <div class="beta">
-            
-                Version beta!
-        
-        </div>
-        
-
-    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}">
-            <figure class="logo hvr-buzz-out" style="position:relative; top:200px; font-size:1.2em !important;">
+    <div class="{{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}
+        <div class="blog-logo logo-back" href="{{@blog.url}}">
+            <figure class="logo hvr-buzz-out">
                 <img src="{{@blog.logo}}" alt="{{@blog.title}}" style="border-color:#02344a;" />
             </figure>
-            </a>{{/if}}
+        </div>{{/if}}
     
-    </nav>
+    </div>
 </header>
 
 
     <main class="content-view" role="main">
         <article class="content-post-view-all">
-
-           
 
             <section class="post-content">
                 {{content}}
